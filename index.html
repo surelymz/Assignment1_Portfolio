@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang = "en">
+<meta charset ="UTF-8"> <!--character encoding using unicode-8-->
+
+<link rel ="stylesheet" href=""> <!--CSS-->
+<style>
+    
+/*Navigation Bar*/
+
+    /* Background color*/
+    .topnav{
+        background-color:black;
+        overflow:hidden; /*allow the text to go outside of the box or not. 
+        options: visible, hidden (hides the text that exceeds the box), scroll, auto*/
+    }
+
+    /* Style the links*/
+    .topnav a{
+        float: left;
+        color:aliceblue;
+        text-align:center;
+        padding: 14px 16px; /*spaces out the texxt*/
+        text-decoration:none; /*underline or dotted etc. This line helps to take away the default underline in the link*/
+        font-size:17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    /* Add a color to the active/current link - so only the Home button*/
+    .topnav a.active {
+    background-color:blueviolet;
+    color: white;
+    }
+
+/*Hero Section*/
+
+    body, html{
+        height:100%;
+    }
+
+    /*Style the position of the image*/
+    .hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("world.jpg");
+    height:50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+
+    /* Place text in the middle of the image */
+    .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    }
+
+/*About Me*/
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+
+    html {
+    box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+    box-sizing: inherit;
+    }
+
+    .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    }
+
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    }
+
+    .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+    }
+
+    .container {
+    padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    .title {
+    color: grey;
+    }
+
+    .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    .button:hover {
+    background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    }
+
+/*Contact Section*/
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+</style>
+
+<script src=""></script>
+
+<body>
+
+
+
+    <!--Navigation Bar-->
+    <div class="topnav">
+        <a class="active" href="#home">Home</a> <!--class="active", it is a valid link-->
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+    
+
+
+    <!--Hero Section-->
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>I am YM</h1>
+          <p>I'm a Software Engineer and a Traveller.</p>
+          <button>Hire me</button>
+        </div>
+      </div>
+
+
+
+    <!--About Page-->
+
+    <div class="about-section">
+        <h1>About Me</h1>
+        <p>I am a second-year software engineering student. I have just over a year of experience as a junior software engineer with First Technology. In my short time there, I've already contributed to over a dozen projects and assisted with managing one project for one of the firm's long-time clients.</p>
+        <!--Resize the browser window to see that this page is responsive by the way.-->
+      </div>
+      
+      <h2 style="text-align:center">My Skills</h2>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="coding.jpg" alt="Coding" style="width:100%">
+            <div class="container">
+              <h2>Coding</h2>
+              <p class="title">Coding</p>
+              <p>I am learning Java and HTML. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <p>Very fun!</p>
+              <p><button class="button">More</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="skiing.jpg" alt="Skiing" style="width:100%">
+            <div class="container">
+              <h2>Skiing</h2>
+              <p class="title">Skiing</p>
+              <p>Skiing is fun!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <p>Ask me about skiing in BC.</p>
+              <p><button class="button">More</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="debate.jpg" alt="Debate" style="width:100%">
+            <div class="container">
+              <h2>Debate</h2>
+              <p class="title">Debate</p>
+              <p>Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <p>Debate is meaningful.</p>
+              <p><button class="button">More</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Contact Section-->
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Me</h2>
+          <p>Name:YM | Email: ymuo@uwo.ca | Phone: 601-204-1234</p>
+          <p>Fill out the form and I will reach back soon!</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="contact.jpg" style="width:100%">
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">France</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Footer -->
+
+      <style>
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: purple;
+          color: white;
+          text-align: center;
+        }
+        </style>
+        
+        <div class="footer">
+          <p>Privacy Policy</p>
+        </div>
+
+
+</body>
+</html>
